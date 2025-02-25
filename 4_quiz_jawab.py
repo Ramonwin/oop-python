@@ -1,4 +1,4 @@
-# Jawaban Quiz 1
+# Jawaban Quiz
 apbn = 40000000000
 anggaran = 15000
 
