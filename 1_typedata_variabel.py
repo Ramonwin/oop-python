@@ -5,7 +5,7 @@ nama = 'Keysia' # case sensitif
 Nama = 'Gia'    # case sensitif
 print(Nama)     # cetak output Nama
 
-buah = ['apel','mangga','jeruk']        # list : bisa diubah 
+buah = ['apel','mangga','jeruk']         # list : bisa diubah 
 hewan = ('kucing','kelinci','gajah')    # tuple : tidak bisa diubah
 nilai = {70,80,80,80,90}                # set : unik
 mahasiswa = {'nama':'Fariz','usia':20}  # dict : key - value
