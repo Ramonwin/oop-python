@@ -1,6 +1,6 @@
 quiz= """
 ## Buatlah program makan siang gratis dengan ketentuan
-1. buat 3 kategori pilihan SD, SMP, SMA
+1. buat 3 kategori pilihan SD, SMP, SMA (input dinamis)
 2. jika SD : kuota sebanyak 3.000.000 siswa
 3. jika SMP : kuota sebanyak 2.000.000 siswa
 4. jika SMA : kuota sebanyak 1.000.000 siswa

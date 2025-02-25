@@ -14,14 +14,12 @@ else :
 
 if(total > apbn):
     print("total anggaran :", total)
+    print("anggaran  APBN :", apbn)
     print("anggaran kurang")
 else:
     print("total anggaran :", total)
+    print("anggaran  APBN :", apbn)
     print("anggaran cukup")
-
-
-
-
 
 
 
