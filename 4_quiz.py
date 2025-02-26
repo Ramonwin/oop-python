@@ -6,9 +6,10 @@ quiz= """
 4. jika SMA : kuota sebanyak 1.000.000 siswa
 5. anggaran per siswa sebesar Rp. 15.000
 6. anggaran dari APBN Rp. 40 Milliar
-7. hitunglah total anggaran per kategori => jumlah siswa * anggaran persiswa
-8. jika anggaran APBN kurang dari total anggaran,
+7. hitunglah total biaya per kategori => jumlah siswa * anggaran persiswa
+8. jika anggaran APBN kurang dari total biaya,
     munculkan pesan "Anggaran kurang"
-9. jika anggaran APBN Lebih dari total anggaran,
+9. jika anggaran APBN Lebih dari total biaya,
     munculkan pesan "Anggaran cukup"
+10. tampilkan total biaya, anggaran APBN, dan pesan
 """
