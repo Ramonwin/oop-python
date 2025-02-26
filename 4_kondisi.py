@@ -1,29 +1,29 @@
-#=====================================
-# kondisional 
-#=====================================
+# =====================================
+# ======== KONDISIONAL ================
+# =====================================
+
 nilai = 70
-if(nilai > 60):
+if(nilai > 50):
     print("lulus")
 
-#=====================================
-#=====================================
-lampu ="merah"
-if(lampu == "merah"):
-    print("silahkan maju")
-else :
-    print("Stop")
+print("=========================")
 
-#=====================================
-#=====================================
+lampu = "hijau"
+if(lampu=="hijau"):
+    print("silahkan maju")
+else:
+    print("STOP")
+
+print("=========================")
 
 hari ="senin"
-if(hari == "senin"):
-    print('Upacara')
-elif(hari =="selasa"):
+if(hari=="senin"):
+    print("Upacara Bendera")
+elif(hari=="selasa"):
     print("Nobar")
-elif(hari =="rabu"):
-    print("kuliah")
-elif(hari =="kamis"):
-    print("puasa")
+elif(hari=="rabu"):
+    print("Travelling")
+elif(hari=="kamis"):
+    print("Puasa sunnah")
 else:
-    print('tidak ada agenda')
+    print("tidak ada agenda")
