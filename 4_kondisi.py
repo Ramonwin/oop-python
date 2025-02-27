@@ -7,6 +7,7 @@ if nilai > 50:
     print("lulus")
 
 print("=========================")
+# if else
 
 lampu = "hijau"
 if lampu=="hijau":
@@ -15,7 +16,8 @@ else:
     print("STOP")
 
 print("=========================")
-
+#if 2 kondisi atau lebih
+# elif == else if
 hari ="senin"
 if hari=="senin":
     print("Upacara Bendera")
