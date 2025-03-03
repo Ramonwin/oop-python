@@ -1,5 +1,5 @@
 quiz ="""
-1. Beri nilai untuk variabel nilai Total cuti tahunan 12 hari & cuti bersama 4 hari
+1. Beri nilai untuk variabel Total cuti tahunan 12 hari & cuti bersama 4 hari
 2. Input Dinamis pengajuan cuti
 3. maksimal ambil cuti adalah 3 hari
 4. Hitung total sisa cuti, dan munculkan pesan sisa cuti adalah : ....
