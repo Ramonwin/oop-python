@@ -24,4 +24,4 @@ elif ambilCuti == 3 :
     sisaCuti = totCuti - cutBer - ambilCuti
     print("Sisa cuti adalah : " , sisaCuti)
 else :
-    print("Maaf tidak bisa, pengajuan melebihi batas maksimal")
+    print("Maaf tidak bisa, Pengajuan melebihi batas maksimal")
