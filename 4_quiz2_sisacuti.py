@@ -14,13 +14,7 @@ cutBer = 4
 
 ambilCuti = int(input("Masukan pengajuan cuti : "))
 
-if ambilCuti == 1:
-    sisaCuti = totCuti - cutBer - ambilCuti
-    print("Sisa cuti adalah : " , sisaCuti)
-elif ambilCuti == 2:
-    sisaCuti = totCuti - cutBer - ambilCuti
-    print("Sisa cuti adalah : " , sisaCuti)
-elif ambilCuti == 3 :
+if ambilCuti <= 3:
     sisaCuti = totCuti - cutBer - ambilCuti
     print("Sisa cuti adalah : " , sisaCuti)
 else :

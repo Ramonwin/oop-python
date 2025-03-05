@@ -1,6 +1,6 @@
 # looping menggunakan range
 for i in range(10):
-    print("posisi i saat ini :", i)
+    print("posisi i indeks ke -:", i)
 
 for i in range(1,5):
     print(i)
