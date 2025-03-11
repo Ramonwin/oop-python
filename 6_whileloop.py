@@ -11,8 +11,7 @@ print(f"angka sekarang => {angka}")
 print("angka sekarang =>", angka)
 
 while angka < 5:
-    angka += 1
-    print(f"angka sekarang = {angka}")
-
+        print(f"angka sekarang = {angka}")
+        angka += 1
 
 
