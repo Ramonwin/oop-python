@@ -11,12 +11,14 @@ tanggal = input("masukan ganjil / genap : ")
 
 if tanggal == "ganjil":
     for i in range(1,32):
-        if i % 2 == 1: print(i)
-        if i == 29 : print("Hari raya Nyepi")
-        if i == 31 : print("Hari raya Idul fitri")
+        if i % 2 == 1:
+            if i == 29 : print(i, "Hari raya Nyepi")
+            elif i == 31 : print(i, "Hari raya Idul fitri")
+            else: print(i)
 elif tanggal == "genap":
     for i in range(1,32):
-        if i % 2 == 0: print(i)
-        if i == 20 : print("Pembayaran THR")
+        if i % 2 == 0:
+            if i == 20 : print(i,"Pembayaran THR")
+            else: print(i)
 else:
     print("Inputan tidak sesuai")        
