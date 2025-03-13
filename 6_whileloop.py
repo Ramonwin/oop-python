@@ -6,12 +6,22 @@
 
 # akhir dari program
 
-angka = 1
-print(f"angka sekarang => {angka}")
-print("angka sekarang =>", angka)
 
-while angka < 5:
-        print(f"angka sekarang = {angka}")
+#counted loop
+angka = 1
+while angka <= 5:
+        print("angka saat ini = ", angka)
         angka += 1
+
+#uncounted loop
+password =""
+while password !="1234":
+        password =input("masukan password : ")
+print("Login Berhasil")
+
+#infinite loop
+while True:
+        print("Hati hati ini Infinite loop, tidak akan berhenti kecuali pake break")
+        break
 
 
