@@ -20,7 +20,7 @@ for i in nilai:
 #list ke-2
 nilai =[70,85,60,40,50]
 for i in nilai:
-    print(i)
+    print(i,end="")
 
 
 #===============================
