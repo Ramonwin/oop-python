@@ -1,6 +1,12 @@
 quiz="""
-
-
+1. buatlah program sederhana payroll dengan ketentuan
+2. buat variable gapok = Rp. 10jt
+3. buat inputan 2x untuk (nama, jabatan)
+4. jika kode jabatan 1 maka tunjangan = Rp 5jt
+5. jika kode jabatan 2 maka tunjangan = Rp 2jt
+6. jika selain kode diatas munculkan pesan "kode jabatan tidak sesuai"
+7. total gaji = gapok + tunjangan
+8. tampilkan nama & total gaji
 """
 
 gapok = 10000000
