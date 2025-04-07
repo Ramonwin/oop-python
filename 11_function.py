@@ -21,11 +21,11 @@ def salary(gapok, tunjangan):
     hasil = gapok + tunjangan
     return hasil
 
-print(f"take home pay salary adalah : {salary(5000000,1000000)}")
+total = salary(5000000,1000000)
+print(f"take home pay salary adalah : {total}")
 
 #jika dicek lagi
-cek = salary(5000000,1000000)
-print(cek)
+print(total)
 
 # fungsi ke-4
 # perbedaan function menggunakan return dan yang menggunakan print()
@@ -37,8 +37,8 @@ def gaji(gapok, tunjangan):
     print(f"gaji adalah : {hasil}")
 
 #jika di cek lagi
-cek = gaji(4000000,500000)
-print(cek)
+total = gaji(4000000,500000)
+print(total)
 
 #fungsi ke-5, memanggil fungsi di dalam fungsi
 def sapa():
