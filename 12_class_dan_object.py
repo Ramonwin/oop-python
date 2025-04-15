@@ -12,7 +12,7 @@ class unggas:
 
 
 #buat objek
-burung = unggas("Elang","2 Sayap","Cakar Tajam")
+burung = unggas("Elang","2 Sayap","Cakar tajam")
 burung.terbang()
 
 
