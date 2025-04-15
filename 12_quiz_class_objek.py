@@ -14,7 +14,7 @@ class sistemPenilaian():
             grade = "A"
         else :
             grade ="B"
-        print(f"Grade nya adalah : {grade}")
+        print(f"Gradenya adalah : {grade}")
 
 siakad = sistemPenilaian(70,80,90,100)
 na = siakad.hitungNilaiAkhir()
