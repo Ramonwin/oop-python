@@ -1,7 +1,8 @@
 #membuat class
 class unggas:
     #pass #pernyataan kosong. Artinya: Python akan melewati baris itu tanpa melakukan apa-apa
-    # Konstruktor, fungsi yang dipanggil saat objek dibuat
+    #__init__ Konstruktor, fungsi yang dipanggil saat objek dibuat
+    #self : Referensi ke objek itu sendiri
     def __init__(self, inputnama, inputsayap, inputcakar):
         self.nama = inputnama
         self.sayap = inputsayap
