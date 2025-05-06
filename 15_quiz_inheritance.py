@@ -29,20 +29,21 @@ class umk(ump):
         super().__init__(nilaiUMP, inflasi, alfa)
         self.ped = ped
     
-    def pertumbuhan_ekonomi(self):
-        return self.ped
+    def finalUMK(self):
+        final = self.hitung_umk() + (self.hitung_umk() * self.ped)
+        print(f"final umk Bandung : {final}")
         
+nilaiUMP = 2500000
+inflasi = 0.1
+alfa = 0.2
+ped = 0.07
 
+nilaiSub = ump(nilaiUMP,inflasi,alfa)
+print(f"subtotal umk : {nilaiSub.hitung_umk()}")
 
-nilai = ump(25000000,0.1,0.2)
-sub_nilai = nilai.hitung_umk()
-print(f"sub nilai : {sub_nilai}")
+nilaiFinal = umk(nilaiUMP,inflasi,alfa,ped)
+nilaiFinal.finalUMK()
 
-umk = umk(25000000,0.1,0.2,0.065)
-sub1 = umk.hitung_umk()
-ped = umk.pertumbuhan_ekonomi()
-finalUMK = sub1 + (sub1 * ped)
-print(f"Final Nilai UMK Kota Bandung Adalah : {finalUMK}")
 
 
 
