@@ -23,16 +23,29 @@ class malaikat(makhluk):
         self.asal = asal
         print(f"{self.nama} terbuat dari {self.asal}")
 
+class jin(makhluk):
+    def __init__(self, nama, sifat):
+        super().__init__(nama)
+        self.sifat = sifat
+
+    def menggoda(self):
+        print(f"{self.nama} punya sifat {self.sifat} dan juga suka menggoda")
+
+
+class manusia(jin):
+    def __init__(self, nama, sifat, akal):
+        super().__init__(nama, sifat)
+        self.akal = akal
 
 
 nur = malaikat("malaikat","cahaya")
 nur.patuh()
 
+jin = jin("syaiton","sombong")
+jin.angkuh()
+jin.menggoda()
 
-
-
-# jin = makhluk("syaiton")
-# jin.angkuh()
-
+m = manusia("Fulan","Labil", "Cerdas")
+m.menggoda()
 
 
