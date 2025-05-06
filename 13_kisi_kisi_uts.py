@@ -1,4 +1,4 @@
-kisi_uts="""
+kisi_uts = """
     1. buatlah sistem perhitungan BPJS TK
     2. buat inputan untuk masukan nilai upah
     3. buat class bpjsTk
