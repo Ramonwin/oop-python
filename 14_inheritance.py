@@ -34,10 +34,10 @@ mkt = malaikat("Malaikat Ridwan","cahaya")
 mkt.patuh()
 
 class jin(makhluk):
-    def __init__(self, nama,asal):
+    def __init__(self, nama,sifat):
         super().__init__(nama)
-        self.asal= asal
-        print(f"{self.nama} berasal dari {self.asal} ")
+        self.sifat= sifat
+        print(f"{self.nama} mempunyai sifat {self.sifat} ")
 
-j = jin("Syaiton","API")
+j = jin("Syaiton","Sombong")
 j.angkuh()
