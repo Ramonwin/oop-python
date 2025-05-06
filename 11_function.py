@@ -49,5 +49,3 @@ def sapa_user(nama):
     print(f"Selamat datang, {nama}!")
 
 sapa_user("ramon")
-
-
