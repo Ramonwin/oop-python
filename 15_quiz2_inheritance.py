@@ -19,3 +19,34 @@ keterangan : nilai ump = 2,5juta
             pertumbuhan ed = 7%    
             
 """
+nilaiUMP = 2500000
+inflasi = 0.1
+alfa = 0.2
+ped = 0.07
+
+class ump():
+    def __init__(self,nilaiUMP,inflasi,alfa):
+        self.nilaiUMP = nilaiUMP
+        self.inflasi = inflasi
+        self.alfa = alfa
+        
+    def hitungUmk(self):
+        umkDasar = self.nilaiUMP + (self.nilaiUMP * (self.inflasi + self.alfa))
+        return umkDasar
+
+
+class umk(ump):
+    def __init__(self, nilaiUMP, inflasi, alfa, ped):
+        super().__init__(nilaiUMP, inflasi, alfa)
+        self.ped = ped
+
+    def finalUMK(self):
+        hasil = self.hitungUmk() + (self.hitungUmk() * self.ped)
+        print(f"FInal UMK kota Bandung adalah : {hasil}")
+
+
+ump = ump(nilaiUMP,inflasi,alfa)
+print(f"Nilai UMK Dasar : {ump.hitungUmk()}")
+
+umk = umk(nilaiUMP,inflasi,alfa,ped)
+umk.finalUMK()
