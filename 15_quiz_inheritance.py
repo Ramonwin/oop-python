@@ -13,7 +13,10 @@ keterangan : nilai ump = 2,5juta
             index alfa = 20%
             pertumbuhan ed = 7%    
 """
-
+nilaiUMP = 2500000
+inflasi = 0.1
+alfa = 0.2
+ped = 0.07
 class ump():
     def __init__(self, nilaiUMP, inflasi, alfa):
         self.nilai = nilaiUMP
@@ -33,11 +36,6 @@ class umk(ump):
         final = self.hitung_umk() + (self.hitung_umk() * self.ped)
         print(f"final umk Bandung : {final}")
         
-nilaiUMP = 2500000
-inflasi = 0.1
-alfa = 0.2
-ped = 0.07
-
 nilaiSub = ump(nilaiUMP,inflasi,alfa)
 print(f"subtotal umk : {nilaiSub.hitung_umk()}")
 
