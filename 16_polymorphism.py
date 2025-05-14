@@ -42,19 +42,19 @@ class umk_cmh(ump):
     def finalUMK(self):
         ped = 500000
         hasil = self.hitungUmk() + ped
-        print(f"FInal UMK kota Cimahi adalah : {hasil}")
+        print(f"Final UMK kota Cimahi adalah : {hasil}")
 
 class umk_bdg(ump):
     def finalUMK(self):
         ped = 1000000
         hasil = self.hitungUmk() + ped
-        print(f"FInal UMK kota Bandung adalah : {hasil}")
+        print(f"Final UMK kota Bandung adalah : {hasil}")
 
 class umk_pwk(ump):
     def finalUMK(self):
         ped = 2000000
         hasil = self.hitungUmk() + ped
-        print(f"FInal UMK kota Bogor adalah : {hasil}")
+        print(f"Final UMK kota Bogor adalah : {hasil}")
     
 cmh = umk_cmh(nilaiUMP,inflasi,alfa)
 bdg = umk_bdg(nilaiUMP,inflasi,alfa)
