@@ -1,7 +1,7 @@
 class makhluk():
-    def __init__(self,nama):
+    def __init__(self, nama):
         self.nama = nama
-
+    
     def patuh(self):
         print(f"{self.nama} adalah makhluk yang patuh")
 
@@ -9,35 +9,28 @@ class makhluk():
         print(f"{self.nama} adalah makhluk yang angkuh")
 
 #tanpa inheritance
-nur = makhluk("malaikat")
-nur.patuh()
+# nur = makhluk("malaikat")
+# nur.patuh()
 
 class malaikat(makhluk):
-# kalau tidak ingin mengubah atau menambahkan sesuatu
-# maka tidak perlu menggunakan  __init__()
-# gunakanlah "pass"
-#      pass
-
-# mkt = malaikat("Malaikat Ridwan")
-# mkt.patuh()
-
-# jika ingin mengubah atau menambahkan sesuatu
-# subclass haru menggunakan __init__() dan 
-# super().__init__ agar tetap bisa mewarisi inisialisasi dari class induk
-
+#jika tidak menambah atau merubah sesuatu ga perlu __init__()
+# gunakan pass
+#    pass
+#klau merubah /menambah maka gunakan __init__()
+# gunakan super().__init__ agar tetap bisa mewarisi atribut & method dari class induknya
     def __init__(self, nama, asal):
         super().__init__(nama)
         self.asal = asal
         print(f"{self.nama} berasal dari {self.asal}")
 
-mkt = malaikat("Malaikat Ridwan","cahaya")
-mkt.patuh()
+nur = malaikat("\nMalaikat Ridwan","Cahaya")
+nur.patuh()
 
 class jin(makhluk):
-    def __init__(self, nama,sifat):
+    def __init__(self, nama, sifat):
         super().__init__(nama)
-        self.sifat= sifat
-        print(f"{self.nama} mempunyai sifat {self.sifat} ")
+        self.sifat = sifat
+        print(f"{self.nama} memiliki sifat {self.sifat}")
 
-j = jin("Syaiton","Sombong")
+j = jin("Ifrit","sombong")
 j.angkuh()
