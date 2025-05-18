@@ -2,7 +2,7 @@ teks = '''
 Polymorphism : berasal dari kata poly (banyak) dan morph (bentuk) => banyak bentuk
 
 dalam konsep OOP : sebuah prinsip bahwa class dapat memiliki banyak bentuk method yang
-berperilaku beda walaupun namanya sama
+berperilaku beda walaupun namanya sama.
 '''
 
 class pkwt():
