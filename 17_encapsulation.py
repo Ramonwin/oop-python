@@ -27,7 +27,6 @@ class BankAccount:
     def get_balance(self):
         return self.__balance
 
-
 # Membuat objek rekening
 akun = BankAccount("Sarah", 1000)
 
@@ -39,7 +38,7 @@ akun.withdraw(300)
 print("Saldo akhir:", akun.get_balance())
 
 # Coba akses atribut private secara langsung (tidak disarankan)
-# print(akun.__balance)  # ❌ Akan error
+#print(akun.__balance)  # ❌ Akan error
 
 # Bisa diakali (tapi jangan dilakukan): 
-print(akun._BankAccount__balance)  # ⛔ Bisa, tapi ini melanggar encapsulation
+#print(akun._BankAccount__balance)  # ⛔ Bisa, tapi ini melanggar encapsulation
