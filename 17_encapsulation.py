@@ -30,7 +30,7 @@ class BankAccount:
 
 
 # Membuat objek rekening
-akun = BankAccount("Andi", 1000)
+akun = BankAccount("Sarah", 1000)
 
 # Mengakses method publik
 akun.deposit(500)
@@ -39,7 +39,7 @@ akun.withdraw(300)
 # Mengakses saldo dengan cara benar
 print("Saldo akhir:", akun.get_balance())
 
-# Coba akses atribut private secara langsung (tidak disarankan)
+# Coba akses atribut private secara langsung (tidak di sarankan)
 # print(akun.__balance)  # ❌ Akan error
 
 # Bisa diakali (tapi jangan dilakukan): 
