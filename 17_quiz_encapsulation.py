@@ -1,7 +1,7 @@
 quiz='''
-Buatlah sebuah kelas bernama Student yang memiliki atribut berikut:
+Buatlah sebuah kelas bernama Mahasiswa yang memiliki atribut berikut:
 
-    1. name (public) → nama siswa
+    1. nama (public) → nama siswa
 
     2. __nilai (private) → nilai siswa
 
