@@ -7,7 +7,7 @@ berperilaku beda walaupun namanya sama
 
 class pkwt():
     def biodata(self):
-        print('Saya pegawai kontrak')
+        print('Saya adalah pegawai kontrak')
 
 class pkwtt():
     def biodata(self):
