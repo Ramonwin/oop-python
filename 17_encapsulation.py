@@ -5,7 +5,6 @@ hanya bisa lewat method tertentu.
 
 Tujuannya: Melindungi data, Membatasi akses langsung ke properti/atribut objek, Mempermudah pemeliharaan kode.
 '''
-
 class BankAccount:
     def __init__(self, name, balance):
         self.name = name            # public
@@ -39,7 +38,7 @@ akun.withdraw(300)
 # Mengakses saldo dengan cara benar
 print("Saldo akhir:", akun.get_balance())
 
-# Coba akses atribut private secara langsung (tidak di sarankan)
+# Coba akses atribut private secara langsung (tidak disarankan)
 # print(akun.__balance)  # ❌ Akan error
 
 # Bisa diakali (tapi jangan dilakukan): 
