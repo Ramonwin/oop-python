@@ -13,11 +13,12 @@ class bankAccount():
     #saldoAkhir
     #tipe akses / access modifier
     #getter & setter
-    def __init__(self,nama, balance):
-        self.nama = nama            #public
+
+    def __init__(self, nama, balance):
+        self.nama = nama            #public (bebas akses)
         # self.balance = balance    #public
-        # self._balance = balance   #protected
-        self.__balance = balance    #private
+        # self._balance = balance   #protected (untuk internal / subclass)
+        self.__balance = balance    #private (enkapsulasi penuh)
         
     def deposit(self, amount):
         if amount > 10000:

@@ -1,53 +1,15 @@
-teks = '''
-Encapsulation (enkapsulasi) adalah prinsip OOP yang menyembunyikan detail internal suatu objek dari luar.
-Jadi, data atau method tertentu tidak bisa diakses secara langsung dari luar kelas,
-hanya bisa lewat method tertentu.
+quiz='''
+Buatlah sebuah kelas bernama Mahasiswa yang memiliki atribut berikut:
 
-Tujuannya: Melindungi data, Membatasi akses langsung ke properti/atribut objek, Mempermudah pemeliharaan kode.
+    1. nama (public) → nama siswa
+
+    2. __nilai (private) → nilai siswa
+
+Kelas tersebut harus memiliki:
+
+    1. Method set_nilai(self, nilai) untuk mengatur nilai siswa (hanya jika nilai antara 0-100).
+
+    2. Method get_nilai(self) untuk mengambil nilai siswa.
+
+    3. Validasi: Jika nilai tidak dalam rentang 0-100, tampilkan pesan error.
 '''
-
-class bankAccount():
-    #saldo awal
-    #deposit
-    #withdraw
-    #saldoAkhir
-    #tipe akses / access modifier
-    #getter & setter
-    def __init__(self,nama, balance):
-        self.nama = nama            #public
-        # self.balance = balance    #public
-        # self._balance = balance   #protected
-        self.__balance = balance    #private
-        
-    def deposit(self, amount):
-        if amount > 10000:
-            self.__balance += amount
-            print(f"Deposit berhasil, saldo sekarang : {self.__balance}")
-        else:
-            print("Deposit minimal harus Rp 10.000")
-    
-    def withdraw(self, amount):
-        if 0 <= amount <= self.__balance:
-            self.__balance -= amount
-            print(f"Withdraw berhasil, sisa saldo : {self.__balance}")
-        else:
-            print("Maaf Saldo Anda Tidak Cukup")
-    
-    def get_balance(self):
-        return self.__balance
-    
-#buat objek rekening
-rekening = bankAccount("Sarah",1000000)
-
-# mengakses method publik / setter
-rekening.deposit(500000)
-rekening.withdraw(200000)
-
-# Mengakses saldo dengan cara benar
-print(f"saldo saat ini : {rekening.get_balance()}")
-
-# Mengakses saldo dengan cara yang salah ❌ akses atribut private secara langsung (tidak disarankan)
-#print(rekening.__balance);
-
-# Bisa diakali (tapi jangan dilakukan): 
-#print(rekening._bankAccount__balance)  # ⛔ Bisa, tapi ini melanggar encapsulation
