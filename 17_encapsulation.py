@@ -15,7 +15,7 @@ class bankAccount():
     #getter & setter
 
     def __init__(self, nama, balance):
-        self.nama = nama            #public (bebas akses)
+        self.nama = nama            #public (bebas akses luar class maupun subclass)
         # self.balance = balance    #public
         # self._balance = balance   #protected (untuk internal / subclass)
         self.__balance = balance    #private (enkapsulasi penuh)
@@ -28,11 +28,11 @@ class bankAccount():
             print("Deposit minimal harus Rp 10.000")
     
     def withdraw(self, amount):
-        if 0 <= amount <= self.__balance:
+        if 50000 <= amount <= self.__balance:
             self.__balance -= amount
             print(f"Withdraw berhasil, sisa saldo : {self.__balance}")
         else:
-            print("Maaf Saldo Anda Tidak Cukup")
+            print("Maaf Saldo Anda Tidak Cukup / Minimal Withdraw Rp 50.000")
     
     def get_balance(self):
         return self.__balance
@@ -47,7 +47,7 @@ rekening.withdraw(200000)
 # Mengakses saldo dengan cara benar
 print(f"saldo saat ini : {rekening.get_balance()}")
 
-# Mengakses saldo dengan cara yang salah ❌ akses atribut private secara langsung (tidak disarankan)
+# Mengakses saldo dengan cara yang salah, akan error ❌ akses atribut private secara langsung (tidak disarankan)
 #print(rekening.__balance);
 
 # Bisa diakali (tapi jangan dilakukan): 

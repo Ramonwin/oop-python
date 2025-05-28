@@ -13,3 +13,24 @@ Kelas tersebut harus memiliki:
 
     3. Validasi: Jika nilai tidak dalam rentang 0-100, tampilkan pesan error.
 '''
+
+class Mahasiswa():
+    def __init__(self, nama):
+        self.nama = nama
+        self.__nilai = 0
+
+    def set_nilai(self, nilai):
+        self.__nilai = nilai
+        if 0 <= nilai <= 100:
+            print(f"nilai siswa yg diinput : {self.__nilai}")
+        else:
+            print("Nilai harus di rentang 0 - 100")
+            print(f"Error : nilai siswa yg diinput : {self.__nilai}")
+
+    def get_nilai(self):
+        return self.__nilai
+    
+mhs = Mahasiswa("ramon")
+mhs.set_nilai(655)
+
+print(f"nilai siswa saat ini : {mhs.get_nilai()}")
