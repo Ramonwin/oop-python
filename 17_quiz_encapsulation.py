@@ -7,7 +7,7 @@ Buatlah sebuah kelas bernama Mahasiswa yang memiliki atribut berikut:
 
 Kelas tersebut harus memiliki:
 
-    1. Method set_nilai(self, nilai) untuk mengatur nilai siswa (hanya jika nilai antara 0-100).
+    1. Method set_nilai(self, nilai) untuk mengatur nilai siswa (hanya nilai antara 0-100).
 
     2. Method get_nilai(self) untuk mengambil nilai siswa.
 

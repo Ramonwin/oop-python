@@ -1,54 +1,36 @@
-teks = '''
-Encapsulation (enkapsulasi) adalah prinsip OOP yang menyembunyikan detail internal suatu objek dari luar.
-Jadi, data atau method tertentu tidak bisa diakses secara langsung dari luar kelas,
-hanya bisa lewat method tertentu.
-
-Tujuannya: Melindungi data, Membatasi akses langsung ke properti/atribut objek, Mempermudah pemeliharaan kode.
-'''
-
 class bankAccount():
-    #saldo awal
-    #deposit
-    #withdraw
-    #saldoAkhir
-    #tipe akses / access modifier
-    #getter & setter
-
     def __init__(self, nama, balance):
-        self.nama = nama            #public (bebas akses)
-        # self.balance = balance    #public
-        # self._balance = balance   #protected (untuk internal / subclass)
-        self.__balance = balance    #private (enkapsulasi penuh)
-        
-    def deposit(self, amount):
-        if amount > 10000:
+        self.nama = nama            #public (bebas akses, dari luar, subclass)
+        # self.balance = balance      #public
+        # self._balance = balance     # protected (internal / subclass)
+        self.__balance = balance    # private (enkapsulasi penuh)
+    
+    def set_deposit(self, amount): #setter
+        if amount >10000 :
             self.__balance += amount
             print(f"Deposit berhasil, saldo sekarang : {self.__balance}")
         else:
-            print("Deposit minimal harus Rp 10.000")
+            print("Deposit minimal Rp. 10.000")
     
-    def withdraw(self, amount):
-        if 0 <= amount <= self.__balance:
+    def set_withdraw(self, amount): #setter
+        if 50000 <= amount <= self.__balance:
             self.__balance -= amount
-            print(f"Withdraw berhasil, sisa saldo : {self.__balance}")
-        else:
-            print("Maaf Saldo Anda Tidak Cukup")
+            print(f"withdraw berhasil, sisa saldo : {self.__balance}")
+        else :
+            print("Saldo Tidak cukup / Penarikan minimal Rp. 50.000")
     
-    def get_balance(self):
+    def get_balance(self): #getter
         return self.__balance
     
-#buat objek rekening
-rekening = bankAccount("Sarah",1000000)
+#buat objek
+rekening = bankAccount("Farhan",1000000)
 
-# mengakses method publik / setter
+#akses method publik
 rekening.deposit(500000)
-rekening.withdraw(200000)
+rekening.withdraw(300000)
 
-# Mengakses saldo dengan cara benar
-print(f"saldo saat ini : {rekening.get_balance()}")
+#akses balance cara yg benar
+print(f"Saldo Akhir adalah : {rekening.get_balance()}")
 
-# Mengakses saldo dengan cara yang salah ❌ akses atribut private secara langsung (tidak disarankan)
-#print(rekening.__balance);
-
-# Bisa diakali (tapi jangan dilakukan): 
-#print(rekening._bankAccount__balance)  # ⛔ Bisa, tapi ini melanggar encapsulation
+# cara yang salah 
+#print(rekening.self__balance)
