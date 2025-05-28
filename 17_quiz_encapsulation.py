@@ -12,6 +12,7 @@ Kelas tersebut harus memiliki:
     2. Method get_nilai(self) untuk mengambil nilai siswa.
 
     3. Validasi: Jika nilai tidak dalam rentang 0-100, tampilkan pesan error.
+
 '''
 
 class Mahasiswa():

@@ -12,6 +12,9 @@ Kelas tersebut harus memiliki:
     2. Method get_nilai(self) untuk mengambil nilai siswa.
 
     3. Validasi: Jika nilai tidak dalam rentang 0-100, tampilkan pesan error.
+
+Tambahan :
+    1. tambahkan method __remedial(private) untuk menghitung nilai mahasiswa yang remedial (nilai <= 60)
 '''
 
 class Mahasiswa():
@@ -27,10 +30,17 @@ class Mahasiswa():
             print("Error : Nilai harus di rentang 0 - 100")
             print(f"Error : Nilai siswa yg diinput : {self.__nilai}")
 
+    def __remedial(self):
+        if self.__nilai <= 60 :
+            print("Nilai anda harus di Remedial")
+        else:
+            print("Nilai anda cukup")
+
     def get_nilai(self):
+        self.__remedial()
         return self.__nilai
     
 mhs = Mahasiswa("ramon")
-mhs.set_nilai(655)
+mhs.set_nilai(60)
 
 print(f"nilai siswa saat ini : {mhs.get_nilai()}")
