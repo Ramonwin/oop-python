@@ -7,7 +7,7 @@ Buatlah sebuah kelas bernama Mahasiswa yang memiliki atribut berikut:
 
 Kelas tersebut harus memiliki:
 
-    1. Method set_nilai(self, nilai) untuk mengatur nilai siswa (hanya nilai antara 0-100).
+    1. Method set_nilai(self, nilai) untuk mengatur nilai siswa (hanya jika nilai antara 0-100).
 
     2. Method get_nilai(self) untuk mengambil nilai siswa.
 
@@ -24,8 +24,8 @@ class Mahasiswa():
         if 0 <= nilai <= 100:
             print(f"nilai siswa yg diinput : {self.__nilai}")
         else:
-            print("Nilai harus di rentang 0 - 100")
-            print(f"Error : nilai siswa yg diinput : {self.__nilai}")
+            print("Error : Nilai harus di rentang 0 - 100")
+            print(f"Error : Nilai siswa yg diinput : {self.__nilai}")
 
     def get_nilai(self):
         return self.__nilai
