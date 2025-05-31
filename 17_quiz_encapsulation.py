@@ -12,26 +12,40 @@ Kelas tersebut harus memiliki:
     2. Method get_nilai(self) untuk mengambil nilai siswa.
 
     3. Validasi: Jika nilai tidak dalam rentang 0-100, tampilkan pesan error.
+
 '''
 
-class mahasiswa():
-    def __init__(self,nama):
-        self.nama = nama
-        self.__nilai = 0
+class Mahasiswa():
+    def __init__(self, nama):
+        self.nama = nama  #public
+        self.__nilai = 0  #private
 
     def set_nilai(self, nilai):
-        if 0 <= nilai <= 100:
-            self.__nilai = nilai
+        self.__nilai = nilai
+        if 0 <= nilai <=100:
+            print(f"Nilai yang diinput : {self.__nilai}")
         else:
-            print ("Error : Nilai harus diantara 0 - 100")
-
+            print("Error : Nilai harus rentang 0 - 100")
+            print(f"Error :Nilai yang diinput : {self.__nilai}")
+    
+    # def __remedial(self):
+    #     if self.__nilai <=60:
+    #         print("Nilai Anda di remedial")
+    #     else:
+    #         print("Nilai anda cukup")
+    
     def get_nilai(self):
+        #self.__remedial()
         return self.__nilai
+    
+mhs = Mahasiswa("farhan")
+mhs.set_nilai(160)
+
+mhs.get_nilai()
+
+
         
-mhs = mahasiswa("Farhan")
-# print(mhs.__nilai) ❌ AttributeError: 'Student' object has no attribute '__grade'
+    
 
-# Ini CARA YANG BENAR (pakai method) ✅
 
-mhs.set_nilai(85)
-print(mhs.get_nilai())
+    
