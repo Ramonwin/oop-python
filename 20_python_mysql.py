@@ -1,25 +1,26 @@
 import mysql.connector
+from mysql.connector import Error
 
-# Koneksi ke database
-conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="",  # Ganti dengan password MySQL kamu
-    database="db_asset2025"
-)
+try:
+    conn = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="",
+        database="db_asset2025"
+    )
 
-cursor = conn.cursor()
+    if conn.is_connected():
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM divisis")
+        hasil = cursor.fetchall()
 
-# Eksekusi query
-cursor.execute("SELECT * FROM divisis")
+        for row in hasil:
+            print(row)
 
-# Ambil semua data
-hasil = cursor.fetchall()
+except Error as e:
+    print("Terjadi error:", e)
 
-# Tampilkan data
-for row in hasil:
-    print(f"ID: {row[0]}, Nama: {row[1]}")
-
-# Tutup koneksi
-cursor.close()
-conn.close()
+finally:
+    if conn.is_connected():
+        cursor.close()
+        conn.close()
