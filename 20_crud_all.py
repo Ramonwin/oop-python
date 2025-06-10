@@ -50,7 +50,7 @@ try:
     if conn.is_connected():
         cursor = conn.cursor()
         #cursor adalah objek perantara yang digunakan untuk menjalankan perintah SQL ke database dari Python.
-        #commit() adalah perintah untuk menyimpan perubahan ke database secara permanen.
+        #conn.commit() adalah perintah untuk menyimpan perubahan ke database secara permanen.
         def tampil_data():
             sql = "SELECT * FROM items"
             cursor.execute(sql)
@@ -64,6 +64,17 @@ try:
             cursor.execute(sql, val)
             conn.commit()
             print("Data berhasil ditambahkan.")
+
+        # def simpan_dataBanyak():
+        #     sql = "INSERT INTO items(sku, nama_item, harga, stok) values(%s,%s,%s,%s)"
+        #     val = [(666666, "Laptop 1", 5000000,10),
+        #             (777777, "Laptop 2", 5000000,10),
+        #             (888888, "Laptop 3", 5000000,10),
+        #             (999999, "Laptop 4", 5000000,10),
+        #             (121212, "Laptop 5", 5000000,10)]
+        #     cursor.execute(sql,val)
+        #     conn.commit()
+        #     print("Data Berhasil disimpan")
 
         def ubah_data(id, sku, nama_item, harga, stok):
             sql = "UPDATE items SET sku = %s, nama_item = %s, harga = %s, stok = %s WHERE id = %s"
@@ -90,6 +101,8 @@ try:
         #simpan_data(555555,"Pointer",150000,5)
         #ubah_data(9,555555,"mousepad",10000,12)
         #hapus_data(9)
+
+        #simpan_dataBanyak()
         tampil_data()
 
 except Error as e:
