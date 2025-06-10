@@ -5,13 +5,13 @@ try:
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="",
-        database="db_asset2025"
+        password="papacakep22",
+        database="db_retail"
     )
 
     if conn.is_connected():
         cursor = conn.cursor()
-        cursor.execute("SELECT * FROM divisis")
+        cursor.execute("SELECT * FROM toko")
         hasil = cursor.fetchall()
 
         for row in hasil:
