@@ -58,16 +58,16 @@ try:
             for data in hasil:
                 print(data)
 
-        def simpan_data(sku, nama_barang, harga, stok):
-            sql = "INSERT INTO items (sku, nama_barang, harga, stok) VALUES (%s,%s,%s,%s)"
-            val = (sku, nama_barang, harga, stok)
+        def simpan_data(sku, nama_item, harga, stok):
+            sql = "INSERT INTO items (sku, nama_item, harga, stok) VALUES (%s,%s,%s,%s)"
+            val = (sku, nama_item, harga, stok)
             cursor.execute(sql, val)
             conn.commit()
             print("Data berhasil ditambahkan.")
 
-        def ubah_data(id, sku, nama_barang, harga, stok):
-            sql = "UPDATE items SET sku = %s, nama_barang = %s, harga = %s, stok = %s WHERE id = %s"
-            val = (sku, nama_barang, harga, stok,id)
+        def ubah_data(id, sku, nama_item, harga, stok):
+            sql = "UPDATE items SET sku = %s, nama_item = %s, harga = %s, stok = %s WHERE id = %s"
+            val = (sku, nama_item, harga, stok,id)
             cursor.execute(sql, val)
             conn.commit()
             print("Data berhasil diubah.")
@@ -87,9 +87,9 @@ try:
 
         #Running :
         
-        #simpan_data(333333,"RAM",750000,5)
-        #ubah_data(4,444444,"mouse",50000,12)
-        #hapus_data(8)
+        #simpan_data(555555,"Pointer",150000,5)
+        #ubah_data(9,555555,"mousepad",10000,12)
+        #hapus_data(9)
         tampil_data()
 
 except Error as e:
