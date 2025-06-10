@@ -11,7 +11,7 @@ try:
 
     if conn.is_connected():
         cursor = conn.cursor()
-        cursor.execute("SELECT * FROM toko")
+        cursor.execute("SELECT * FROM items")
         hasil = cursor.fetchall()
 
         for row in hasil:
@@ -24,3 +24,4 @@ finally:
     if conn.is_connected():
         cursor.close()
         conn.close()
+
