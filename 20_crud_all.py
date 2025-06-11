@@ -71,16 +71,19 @@ try:
             conn.commit()
             print("Data berhasil ditambahkan.")
 
-        # def simpan_dataBanyak():
-        #     sql = "INSERT INTO items(sku, nama_item, harga, stok) values(%s,%s,%s,%s)"
-        #     val = [(666666, "Laptop 1", 5000000,10),
-        #             (777777, "Laptop 2", 5000000,10),
-        #             (888888, "Laptop 3", 5000000,10),
-        #             (999999, "Laptop 4", 5000000,10),
-        #             (121212, "Laptop 5", 5000000,10)]
-        #     cursor.execute(sql,val)
-        #     conn.commit()
-        #     print("Data Berhasil disimpan")
+        def simpan_dataBanyak():
+            sql = "INSERT INTO items(sku, nama_item, harga, stok) values(%s,%s,%s,%s)"
+            val = [(666666, "Laptop 1", 5000000,10),
+                    (777777, "Laptop 2", 5000000,10),
+                    (888888, "Laptop 3", 5000000,10),
+                    (999999, "Laptop 4", 5000000,10),
+                    (121212, "Laptop 5", 5000000,10)]
+            
+            for data in val:
+                cursor.execute(sql,data)
+                conn.commit()
+            
+            print("Data Berhasil disimpan")
 
         def ubah_data(id, sku, nama_item, harga, stok):
             sql = "UPDATE items SET sku = %s, nama_item = %s, harga = %s, stok = %s WHERE id = %s"

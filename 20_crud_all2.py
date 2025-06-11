@@ -1,45 +1,16 @@
 import mysql.connector
 from mysql.connector import Error
+
 try:
     conn = mysql.connector.connect(
-<<<<<<< HEAD
-        host="localhost",
-        user="root",
-        password="",  # kosong kalau pakai XAMPP default
-        database="db_retail"
-=======
         host = "localhost",
         username = "root",
         password = "papacakep22",
         database = "db_retail"
->>>>>>> 8770d975347099c7fb665e84468db16eebf03659
     )
+
     if conn.is_connected():
         cursor = conn.cursor()
-<<<<<<< HEAD
-        #cursor adalah objek perantara yang digunakan untuk menjalankan perintah SQL ke database dari Python.
-        #commit() adalah perintah untuk menyimpan perubahan ke database secara permanen.
-        def tampil_data():
-            sql = "SELECT * FROM items"
-            cursor.execute(sql)
-            hasil = cursor.fetchall()
-            for data in hasil:
-                print(data)
-                
-        def simpan_data(sku, nama_item, harga, stok):
-            sql = "INSERT INTO items(sku,nama_item,harga,stok) VALUES(%s,%s,%s,%s)"
-            val = (sku,nama_item,harga,stok)
-            cursor.execute(sql,val)
-            conn.commit()
-            print("Data Berhasil disimpan")
-            
-            
-        #running :
-        simpan_data(444444,"mouse",100000,15)
-        tampil_data()
-except Error as e:
-    print("Terjadi kesalahan:", e)
-=======
 
     def tampil_data():
         sql = "SELECT * FROM items"
@@ -55,15 +26,29 @@ except Error as e:
         conn.commit()
         print("Data Berhasil disimpan")
 
+    def simpan_dataBanyak():
+        sql = "INSERT INTO items(sku, nama_item, harga, stok) values(%s,%s,%s,%s)"
+        val = [(666666, "Laptop 1", 5000000,10),
+                (777777, "Laptop 2", 5000000,10),
+                (888888, "Laptop 3", 5000000,10),
+                (999999, "Laptop 4", 5000000,10),
+                (121212, "Laptop 5", 5000000,10)]
+        
+        for data in val:
+            cursor.execute(sql,data)
+            conn.commit()
+        
+        print("Data Berhasil disimpan")
+
     
     #running :
-    simpan_data(555555,"Pointer",125000,20)
+    #simpan_data(555555,"Pointer",125000,20)
+    simpan_dataBanyak()
     tampil_data()
             
         
 except Error as e :
     print('Terjadi kesalahan : ', e)
->>>>>>> 8770d975347099c7fb665e84468db16eebf03659
 finally:
     if conn.is_connected():
         cursor.close()
