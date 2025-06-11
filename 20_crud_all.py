@@ -33,7 +33,13 @@
 ┌────────────────────────┐
 │   Data siap digunakan  │
 │   di Python (print, UI)│
-└────────────────────────┘
+
+
+pip install mysql-connector-python
+
+jika muncul segmentation fault.. bukan dari python nya tapi dari library Mysql nya
+rubah versi ke 
+python -m pip install mysql-connector-python==8.0.20
 '''
 
 import mysql.connector

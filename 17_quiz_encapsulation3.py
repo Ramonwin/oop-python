@@ -1,8 +1,8 @@
 quiz='''
 tambahan :
-    1. tambahkan class __bungaKPR(private) -> bunga 15%
-    2. tambahkan class potongan(public) dengan ketentuan :
-        cicilan = amount + bungaKPR * amount
+    1. tambahkan method __bungaKPR(self) -> bunga 15%
+    2. tambahkan method potongan(self, potonganDasar) dengan ketentuan :
+        cicilan = potonganDasar + (bungaKPR * potonganDasar)
     3. tampilkan pesan : cicilan sebesar Rp.....
     4. Saldo akhir = Saldo terakhir - cicilan
     5. tampilkan pesan : saldo saat ini sebesar Rp.....
