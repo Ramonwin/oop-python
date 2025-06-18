@@ -100,11 +100,17 @@ try:
             print("Data berhasil dihapus.")
 
         def pencarian():
-            keyword = input("Masukan keyword :")
+            keyword = input("Masukan keyword pencarian :")
+            #cara ke-1
             sql = "SELECT * FROM items WHERE nama_item LIKE %s"
-            val = ("%" + keyword + "%",)  # bentuk: %keyword%
+            val = ("%" + keyword + "%",)
+
+            #cara ke-2
+            # sql = "SELECT * FROM items WHERE nama_item LIKE '%' %s '%'"
+            # val = (keyword,)
             cursor.execute(sql, val)
             hasil = cursor.fetchall()
+
             for row in hasil:
                 print(row)
 
