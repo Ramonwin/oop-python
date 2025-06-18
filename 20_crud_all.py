@@ -105,7 +105,7 @@ try:
         Wajib pakai , untuk format parameter SQL yang benar
         '''
 
-        #Running :
+        #Running:
         
         #simpan_data(555555,"Pointer",150000,5)
         #ubah_data(9,555555,"mousepad",10000,12)
