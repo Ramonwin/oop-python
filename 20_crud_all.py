@@ -99,6 +99,15 @@ try:
             conn.commit()
             print("Data berhasil dihapus.")
 
+        def pencarian():
+            keyword = input("Masukan keyword :")
+            sql = "SELECT * FROM items WHERE nama_item LIKE %s"
+            val = ("%" + keyword + "%",)  # bentuk: %keyword%
+            cursor.execute(sql, val)
+            hasil = cursor.fetchall()
+            for row in hasil:
+                print(row)
+
         '''
         (id) = bukan tuple → hanya angka
         (id,) = tuple satu elemen
@@ -112,7 +121,8 @@ try:
         #hapus_data(9)
 
         #simpan_dataBanyak()
-        tampil_data()
+        #tampil_data()
+        pencarian()
 
 except Error as e:
     print("Terjadi error:", e)
